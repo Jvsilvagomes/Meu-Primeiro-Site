@@ -10,5 +10,6 @@ p {
 }
 
 header {
-    background-color:lightblue ;
+    background-color:rgb(206, 55, 198) ;
+    color: rgb(0, 0, 0);
 }
