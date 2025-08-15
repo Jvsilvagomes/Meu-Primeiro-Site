@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /*Configurações gerais*/
 body {
   min-height: 100vh;
@@ -21,6 +22,7 @@ header {
   text-align: center;
   font-size: x-large;
 }
+
 main {
   background-color: #bbb4b4;
   flex: 1;
@@ -52,9 +54,10 @@ about-section {
   padding: 30px;
   border-radius: 12px;
 }
+
+/* Seção de hobbies */
 hobbies {
   display: block;
-
   background-color: #32334b;
   width: 90%;
   margin: auto;
@@ -62,10 +65,12 @@ hobbies {
   border-radius: 12px;
   margin-bottom: 60px;
 }
+
 #Titulo-hobbies {
   font-size: 40px;
   color: white;
 }
+
 ul {
   list-style: none;
   background-image: linear-gradient(175deg, #431847 20%, #871034 100%);
@@ -75,7 +80,9 @@ ul {
   border-radius: 5px;
   display: flex;
   gap: 12px;
+  flex-wrap: wrap; /* Adicionado para quebrar a linha em telas grandes, se necessário */
 }
+
 li {
   padding: 12px;
   font-size: 16px;
@@ -90,7 +97,6 @@ li:hover {
 }
 
 /* Seção de contato */
-
 contact {
   display: block;
   background-color: #32334b;
@@ -109,6 +115,7 @@ contact h2 {
   padding: 10px;
   border-radius: 12px;
 }
+
 contact p {
   text-align: center;
   color: white;
@@ -120,7 +127,6 @@ contact p {
 contact a {
   color: white;
   text-decoration: none;
-  align-items: center;
   font-weight: bold;
   padding: 0.5rem 1rem;
   margin: 0 0.5rem;
@@ -143,10 +149,72 @@ footer {
   text-align: center;
   padding: 3rem;
   width: 100%;
-  /* height: 150px; */
 }
 
 footer p {
   font-size: 2rem;
-  /* margin-block-end: 50%; */
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+  /* Hobbies */
+  hobbies ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  hobbies li {
+    min-width: 0; /* Remove a largura mínima para se adaptar à tela */
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  /* Contato */
+  contact p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  contact a {
+    margin: 8px 0;
+    width: 100%; /* Faz com que os links ocupem 100% da largura */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes gerais para telas pequenas */
+  header, main, about-section, hobbies, contact, footer {
+    padding: 20px 10px;
+  }
+  
+  about-section, hobbies, contact {
+    width: 98%;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+  
+  #Titulo-sobre-mim, #Titulo-hobbies {
+    font-size: 1.8rem;
+  }
+  
+  .Texto-sobre-mim, contact p {
+    font-size: 1rem;
+    padding: 15px;
+  }
+  
+  contact h2 {
+    font-size: 1.5rem;
+  }
+  
+  contact a {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.5rem;
+  }
+
+  footer p {
+    font-size: 1rem;
+  }
 }
