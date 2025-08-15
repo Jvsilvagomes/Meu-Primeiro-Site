@@ -7,10 +7,9 @@
 }
 /*Configurações gerais*/
 body {
-  min-width: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  
   font-family: "Titillium Web", sans-serif;
   background-color: #bbb4b4;
 }
@@ -38,6 +37,7 @@ about-section {
   margin: auto;
   padding: 30px;
   border-radius: 12px;
+  margin-bottom: 60px;
 }
 
 #Titulo-sobre-mim {
@@ -61,7 +61,7 @@ hobbies {
   margin: auto;
   padding: 30px;
   border-radius: 12px;
-  margin-top: 20px;
+  margin-bottom: 60px;
 }
 #Titulo-hobbies {
   font-size: 40px;
